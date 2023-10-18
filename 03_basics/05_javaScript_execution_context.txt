@@ -1,0 +1,7 @@
+How does the javascript works in the behind scene?
+
+javascript execution Context
+
+written in copy must see copy as well as video again and again and see in browser
+also try to run function in function to see the call stack in the browser we can see 
+hitesh sir chai aur code js part 1 5:55 hrs and call stack at 6:18 hrs must see important 

@@ -1,3 +1,7 @@
+//control flow means when we are doing login then only that much code only run
+//other code which doesn't needed for that must not run this is called control flow
+
+
 // if
 const isUserloggedIn = true
 const temperature = 41
@@ -23,6 +27,7 @@ const temperature = 41
 
 // const balance = 1000
 
+//dont use this syntax not good practice
 // if (balance > 500) console.log("test"),console.log("test2");
 
 // if (balance < 500) {
