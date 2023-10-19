@@ -4,16 +4,21 @@
 // const values = coding.forEach( (item) => {
 //     //console.log(item);
 //     return item
-// } )
+// } )   //it will not return value it will console.log but won't return value
 
-// console.log(values);
+// console.log(values);  //will show undefined
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+//it returns values
 // const newNums = myNums.filter( (num) => {
-//     return num > 4
+//     return num > 4    //always return in function with {} scope otherwise we can use directly
 // } )
 
+//it will give new array in newNums filtered version which we don't get in forEach 
+
+
+//to get from forEach your data
 // const newNums = []
 
 // myNums.forEach( (num) => {
@@ -37,9 +42,9 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-  let userBooks = books.filter( (bk) => bk.genre === 'History')
+  let userBooks = books.filter( (bk) => bk.genre === 'History')    //here { } not used so no need to return arrow function will understand
 
-  userBooks = books.filter( (bk) => { 
+  userBooks = books.filter( (bk) => {    //used scope { } so we have to use return or remove scope
     return bk.publish >= 1995 && bk.genre === "History"
 })
   console.log(userBooks);

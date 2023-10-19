@@ -1,5 +1,11 @@
 const myNums = [1, 2, 3]
 
+//syntax---  arr.reduce(function(accumlator, current value) , 0)
+//reduce takes argument as a call function and initial value anything we can take here we took 0 as initial
+//function inside take two parameters accumlator and current value
+//firstly initial value is stored in accumlator and operation done changing the value of accumlator accord. to condition
+//
+
 // const myTotal = myNums.reduce(function (acc, currval) {
 //     console.log(`acc: ${acc} and currval: ${currval}`);
 //     return acc + currval
