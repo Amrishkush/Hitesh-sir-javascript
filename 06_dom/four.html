@@ -12,6 +12,8 @@
     </ul>
 </body>
 <script>
+
+    //method 1 
     function addLanguage(langName){
         const li = document.createElement('li');
         li.innerHTML = `${langName}`
@@ -20,20 +22,23 @@
     addLanguage("python")
     addLanguage("typescript")
 
+    //method 2 here same as above but in optimized manner
     function addOptiLanguage(langName){
         const li = document.createElement('li');
-        li.appendChild(document.createTextNode(langName))
+        li.appendChild(document.createTextNode(langName))  //through textNode creation
         document.querySelector('.language').appendChild(li)
     }
     addOptiLanguage('golang')
 
     //Edit
-    const secondLang = document.querySelector("li:nth-child(2)")
+    const secondLang = document.querySelector("li:nth-child(2)") //it will select 2nd one
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
-    const newli = document.createElement('li')
+
+    //another method
+    const newli = document.createElement('li')  //creating
     newli.textContent = "Mojo"
-    secondLang.replaceWith(newli)
+    secondLang.replaceWith(newli)  //secondLang.innerHTML = "Mojo"
 
     //edit
     const firstLang = document.querySelector("li:first-child")
