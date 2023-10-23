@@ -12,6 +12,11 @@
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <!-- below method is also way to work on event but its not good it becomes messy but for react js different thing -->
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl')"></li>
+
+            
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
@@ -19,45 +24,61 @@
    </div>
 </body>
 <script>
+    //below method we can use but it gives less features basically addeventlistener is modern way
+
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
 
-     // attachEvent()
-    // jQuery - on
+     // attachEvent()  //old method
+    // jQuery - on    //old method 
 
+    ////////////////////////things to study about the event (e) or any thing name we get object we get //see by console.log(e) out of this are some important to study\\\\\\\\\\\
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+    
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
-    // }, false)
-
+    // }, false)  //default false
+    //generally default false so if we don't write then it will be true below event bubbling will happen read must
+    //above false is also one of the parameters decides event propogation
+    //basically event capturing and event bubbling
+    //basically parent also clicked get clicked like li clicked then ul in which li is there
+    //this is event propogation called event bubbling
+     //false ---- causes event bubbling bottom to top like first li>ul>body>html
+     //true ----- causes event capturing top to botton like first html>body>ul>li
+      //we can see first which will act on clicking function or alert etc
+  
+      //suppose we want to stop bubbling capturing propogation it will click only targeted
+      //e.stopPropagation()
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation()   //stops propagation
     // }, false)
     
+
+    //
     // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
+    //     e.preventDefault(); // read it
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
    
     
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
+        console.log(e.target.tagName);  //from which event this target it occured we can see various things inside it we can do
+        if (e.target.tagName === 'IMG') {  //other wise target clicked parent removed if clicked outside it will remove its parent so target is wherever we click it will get changing so check then remove 
             console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
+            let removeIt = e.target.parentNode  //selecting parent node
+            removeIt.remove() //onclicking it will remove its parent node li will be deleted inside which  #images is present this is also method below also
         }
     
         
     })
     
-    //removeIt.parentNode.removeChild(removeIt)
+    //removeIt.parentNode.removeChild(removeIt)  //target ka parent ka parent uske andar child jo ki target ka parent h usko remove karne ka tarika h
 </script>
 </html>
