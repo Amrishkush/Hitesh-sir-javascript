@@ -14,16 +14,29 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
+    const xhr = new XMLHttpRequest();   // to make object
+    xhr.open('GET', requestUrl)  //requesting data but still its not its just open
+    xhr.onreadystatechange = function(){  //to track the state basciaclly mean oepn close various states of api 
         console.log(xhr.readyState);
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            console.log(typeof data);
+        if (xhr.readyState === 4) {  //if state become 4 then do
+            const data = JSON.parse(this.responseText)  //will study //means iska response
+            console.log(typeof data);  //always data mostly comes in string so we have to parse
             console.log(data.followers);
         }
     }
     xhr.send();
 </script>
 </html>
+
+
+//actually document or console is also not part of core javascript
+//to do this api is called like v8 engine calls api we can see its reposiotry on github
+//actually javascript run environment basically wrapper inside c++ only
+//whenever we do api called for console document etc interesting
+//core javascript is only some operations like for plus minus etc like on pc we run on node js envrionment basically
+//node js same like v8 engine
+
+--can study xhml on mdn docs
+/--see api data sample hitesh sir
+--api request we can see tree by json formatter tree in order to see data easily
+//see 5:07 part 2 js 2

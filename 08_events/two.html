@@ -13,15 +13,32 @@
     const sayHitesh = function(){
         console.log("Hitesh");
     }
+
     const changeText = function(){
         document.querySelector('h1').innerHTML = "best JS series"
     }
 
-    const changeMe = setTimeout(changeText, 2000)
+     //reference means only function name like changText not changeText()
+     //below save in variable because to clearTimeout we nee reference
+    const changeMe = setTimeout(changeText, 2000) //function reference, time in milli second
+    //settimeout means it will do one time only after 2000 ms
+    //setInterval mean it will do again again every 2000 ms
 
+    //if we write simply clearTimout outside what will be benfit it will set then clear
+    //so we added eventlistener when to clear it if we will click before running it will clear and setimeout will be clear 
     document.querySelector('#stop').addEventListener('click', function(){
         clearTimeout(changeMe)
         console.log("STOPPED")
     })
 </script>
 </html>
+
+--Javascript is synchronous by default means code executes one by one
+--Javascript is single threaded Its slow if we only use js engine but it will become fast as its always found in runtime environment like browser nodejs so it does not effect more
+--Synchronous and single threaded is default behaviour of --Javascript
+--Study execution context -it execute one line of code at a time ---each operation waits for the last one to completer before executing.
+
+-------------codes are written in two way blocking code and no blocking code------------
+Blocking Code means -- Block the flow of program until something is not done --read file sync
+Non Blocking code means --- does not block execution --read file async
+--see video part 2 4:10:39

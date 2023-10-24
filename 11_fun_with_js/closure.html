@@ -72,3 +72,22 @@
 
     </script>
 </html>
+
+//lexical scoping 
+//parent se jitne bhi baacche h uske andar mang skte h variable ka access parent ka
+//parent ke andar bhai bhai ke paas jo variable h wo aapas me share nhi krenge saath me wo parent ko bhi access nhi krne denge 
+//outer of parent to kr hi nhi payega
+
+// parent(){         //isko B aur C ka access nhi kyunki wo child1 aur child2 ke scope me h parent ko child ka access nhi milega
+//     A            //parent ka variable maan lete h
+//     child1(){       //child1 ko A ka access h kyunki wo parent h pr C ka nhi bhai h
+//          B        
+//     }
+//     Child2(){     //child1 ko A ka access h kyunki wo parent h pr B ka nhi bhai h
+//         C 
+//     }
+// }
+     ///yaha(bahar) kisi ka access nhi milega partnt child kisi ka nahi 
+
+//closure
+//upar example color wala saath me video dekho
