@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body,header, html{
+            text-align: center;
+            margin: 0
+         }
+         header{
+            background-color: gray;
+            padding: 10px;
+
+         }
+         .btn{
+            padding: 2px 40px 2px 40px;
+            background-color: lightgray;
+            border: none
+         }
+         .color-picker{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 4px
+         }
+         #blue{
+            background-color: blue;
+            border: solid 2px black
+         }
+         #yellow{
+            background-color: yellow;
+            border: solid 2px black
+         }
+         #whitesmoke{
+            background-color: whitesmoke;
+            border: solid 2px black
+         }
+         #skyblue{
+            background-color: skyblue;
+            border: solid 2px black
+         }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="btn">Home</button>
+    </header>
+    <section>
+        <h1>Color Scheme Switcher</h1>
+        <div class="color-picker" id="blue"></div> 
+        <div class="color-picker" id="yellow"></div>
+        <div class="color-picker" id="whitesmoke"></div>
+        <div class="color-picker" id="skyblue"></div>
+        <p>Try clicking on one of the colors above change the background color of this page!</p>
+    </section>
+    <script src="color-switcher.js"></script>
+</body>
+</html>
